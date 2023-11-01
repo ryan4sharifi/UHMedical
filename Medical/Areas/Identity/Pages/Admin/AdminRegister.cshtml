@@ -1,0 +1,48 @@
+﻿@page
+@model AdminRegisterModel
+
+<h2>Admin Registration</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Admin.FirstName"></label>
+        <input asp-for="Admin.FirstName" required />
+        <span asp-validation-for="Admin.FirstName"></span>
+    </div>
+    <div>
+        <label asp-for="Admin.MiddleInitial"></label>
+        <input asp-for="Admin.MiddleInitial" />
+        <span asp-validation-for="Admin.MiddleInitial"></span>
+    </div>
+    <div>
+        <label asp-for="Admin.LastName"></label>
+        <input asp-for="Admin.LastName" required />
+        <span asp-validation-for="Admin.LastName"></span>
+    </div>
+    <div>
+        <label asp-for="Admin.Office"></label>
+        <input asp-for="Admin.Office" />
+        <span asp-validation-for="Admin.Office"></span>
+    </div>
+    <div>
+        <label asp-for="Admin.DoB"></label>
+        <input type="date" asp-for="Admin.DoB" required />
+        <span asp-validation-for="Admin.DoB"></span>
+    </div>
+    <div>
+        <label asp-for="Admin.Phone"></label>
+        <input asp-for="Admin.Phone" required />
+        <span asp-validation-for="Admin.Phone"></span>
+    </div>
+    <div>
+        <label asp-for="Admin.Email"></label>
+        <input type="email" asp-for="Admin.Email" required />
+        <span asp-validation-for="Admin.Email"></span>
+    </div>
+    <div>
+        <label for="Password">Password</label>
+        <input type="password" name="Password" required />
+    </div>
+    <button type="submit">Register</button>
+</form>
+
